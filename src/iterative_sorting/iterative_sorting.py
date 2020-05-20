@@ -1,4 +1,7 @@
 # TO-DO: Complete the selection_sort() function below
+# Accidently pushed to master
+
+
 def selection_sort(arr):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
@@ -14,9 +17,8 @@ def selection_sort(arr):
         # TO-DO: swap
         # Your code here
         # swapping values
-        swapped_value = arr[i]
-        arr[i] = arr[smallest_index]
-        arr[smallest_index] = swapped_value
+        # swapped_value = arr[i]
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
     return arr
 
 
@@ -31,6 +33,7 @@ def bubble_sort(arr):
                 swapped_value = arr[i-1]
                 arr[i-1] = arr[i]
                 arr[i] = swapped_value
+                # arr[j], arr[j-1] = arr[j-1], arr[j]
                 run = True
     return arr
 
